@@ -1,0 +1,17 @@
+{
+  "name": "newsx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass index.scss index.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.8"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

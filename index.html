@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsX</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- font Awesome link -->
+  <script src="https://kit.fontawesome.com/a5edecf5a9.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <nav class="navBox sticky-top">
+    <div class="logoBox">
+      <a class="logoText" href="#">news<span class="newsText">X</span></a>
+    </div>
+
+    <div class="saveBtn">
+      <a class="btn offMobileBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+        aria-controls="offcanvasTop"><i class="fas fa-search searchIcon"></i></a>
+
+      <div class="offcanvas offcanvas-top offMobile" tabindex="-1" id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h1></h1>
+          <button type="button" class="btn-close text-reset offMobileBtn" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="topRightBox">
+            <div class="searchBox topElement">
+              <div class="search">
+                <button class="topButtons searchElement"><i class="fas fa-search searchIcon"></i></button>
+                <input type="text" class="searchElement" placeholder="search news here...">
+                <button class="topButtons searchElement"><i class="fas fa-long-arrow-alt-right searchIcon"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown open">
+        <a class="btn settingButton" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton2">
+          <div class="countrySources">
+            <div class="dropdownDiv1">
+              <label class="dropdown-header dropdownHeading">COUNTRY</label>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <input type="radio" name="radio" id="india">
+                <label class="dropdown-header" for="india">INDIA</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="unitedState">
+                <label class="dropdown-header" for="unitedState">United State</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="sk">
+                <label class="dropdown-header" for="sk">South Korea</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="nz">
+                <label class="dropdown-header" for="nz">New Zealand</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="australia">
+                <label class="dropdown-header" for="australia">Australia</label>
+              </li>
+            </div>
+            <div class="dropdownDiv2">
+              <label class="dropdown-header dropdownHeading">SOURCE</label>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <input type="radio" name="radio" id="all">
+                <label class="dropdown-header" for="all">All News (Default)</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="usatoday">
+                <label class="dropdown-header" for="usatoday">USA Today</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="news24">
+                <label class="dropdown-header" for="news24">News24</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="bbc">
+                <label class="dropdown-header" for="bbc">BBC-NEWS</label>
+              </li>
+              <li>
+                <input type="radio" name="radio" id="toi">
+                <label class="dropdown-header" for="toi">The Time of India</label>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide SliderBox" data-bs-ride="carousel">
+      <div class="carousel-indicators" id="slider-data">
+      </div>
+      <div class="carousel-inner" id="slider">
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span id="preBtn" class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span id="nextBtn" class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="tagline" id="tagLine">
+      <h2 class="text-center h1" id="errorHead"> Way to achieve everything with newspaper reading </h2>
+    </div>
+
+    <div class="newsContent" id="newsBox">
+    </div>
+
+  </div>
+  <footer>
+    <div class="topFooter">
+      <div class="leftFooter">
+        <input type="email" placeholder="Enter e-mail">
+        <button>Subscribe</button>
+      </div>
+      <div class="rightFooter">
+        <a href="#"><i class="fa-brands fa-github-square"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+      </div>
+    </div>
+    <hr>
+    <div class="copyrightBox">
+      <p class="h3">© copyright <a href="#">NewsX</a> Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
